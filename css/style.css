@@ -1,12 +1,14 @@
 :root {
-  --bg: #1f1f1f;
-  --bg-alt: #272727;
-  --panel: #2e2e2e;
-  --text: #f7f7f7;
-  --muted: #c4c4c4;
-  --accent: #ff8c1a;
-  --accent-strong: #ff7600;
-  --border: #3e3e3e;
+  --bg: #090c14;
+  --bg-alt: #0d1324;
+  --panel: rgba(18, 27, 50, 0.7);
+  --panel-strong: rgba(24, 34, 61, 0.9);
+  --text: #eef3ff;
+  --muted: #a7b4d5;
+  --accent: #8b9bff;
+  --accent-strong: #6f81ff;
+  --border: rgba(142, 157, 204, 0.28);
+  --shadow: 0 20px 35px rgba(4, 8, 20, 0.35);
 }
 
 * {
@@ -22,18 +24,21 @@ body {
     Segoe UI,
     Roboto,
     sans-serif;
-  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-alt) 100%);
+  background:
+    radial-gradient(circle at 20% 0%, rgba(111, 129, 255, 0.22), transparent 40%),
+    radial-gradient(circle at 80% 20%, rgba(100, 228, 255, 0.16), transparent 35%),
+    linear-gradient(170deg, var(--bg) 0%, var(--bg-alt) 100%);
   color: var(--text);
   line-height: 1.6;
 }
 
 .container {
-  width: min(1040px, 92vw);
+  width: min(1080px, 92vw);
   margin-inline: auto;
 }
 
 .site-header {
-  padding: 1.2rem 0 3rem;
+  padding: 1.2rem 0 4rem;
   border-bottom: 1px solid var(--border);
 }
 
@@ -45,9 +50,16 @@ body {
 }
 
 .logo {
-  color: var(--text);
+  display: grid;
+  place-content: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 0.6rem;
   text-decoration: none;
   font-weight: 700;
+  color: var(--text);
+  background: var(--panel-strong);
+  border: 1px solid var(--border);
 }
 
 .nav ul {
@@ -62,6 +74,7 @@ body {
 .nav a {
   color: var(--muted);
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .nav a:hover,
@@ -70,28 +83,32 @@ body {
 }
 
 .hero {
-  padding: 4rem 0 1rem;
+  padding: 5rem 0 0.8rem;
 }
 
 .eyebrow {
-  color: var(--accent);
+  color: #b6c1ff;
   font-weight: 600;
-  margin-bottom: 0.25rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
 }
 
 .hero h1 {
-  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-size: clamp(2.2rem, 6vw, 3.7rem);
   margin: 0;
+  line-height: 1.2;
 }
 
 .hero-copy {
   color: var(--muted);
-  margin-top: 0.75rem;
-  max-width: 56ch;
+  margin-top: 1rem;
+  max-width: 58ch;
 }
 
 .hero-actions {
-  margin-top: 1.4rem;
+  margin-top: 1.6rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
@@ -99,61 +116,97 @@ body {
 
 .btn {
   background: var(--accent);
-  color: #1b1b1b;
+  color: #111426;
   text-decoration: none;
-  padding: 0.65rem 1rem;
-  border-radius: 0.6rem;
+  padding: 0.68rem 1.05rem;
+  border-radius: 0.7rem;
   font-weight: 700;
   border: 1px solid transparent;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
 }
 
 .btn:hover,
 .btn:focus-visible {
+  transform: translateY(-1px);
   background: var(--accent-strong);
 }
 
 .btn-ghost {
   background: transparent;
   color: var(--text);
-  border: 1px solid var(--accent);
+  border: 1px solid var(--border);
 }
 
 .section {
-  padding: 2.5rem 0;
+  padding: 2.9rem 0;
 }
 
 .section h2 {
   margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 .skeleton-card {
   background: var(--panel);
   border: 1px solid var(--border);
-  border-radius: 0.8rem;
-  padding: 1rem;
+  border-radius: 0.95rem;
+  padding: 1.1rem;
+  backdrop-filter: blur(8px);
+  box-shadow: var(--shadow);
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1rem;
 }
 
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.project-card h3,
+.skills-grid h3,
+.project-card h4 {
+  margin: 0;
+}
+
+.project-card h4 {
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.stack-list,
 .pill-list {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.6rem;
-  margin: 0;
+  gap: 0.55rem;
+  margin: 0.5rem 0 0;
   padding: 0;
 }
 
+.stack-list li,
 .pill-list li {
   border: 1px solid var(--border);
-  background: var(--panel);
-  color: var(--muted);
+  background: rgba(139, 155, 255, 0.12);
+  color: var(--text);
   border-radius: 999px;
-  padding: 0.35rem 0.75rem;
+  padding: 0.32rem 0.72rem;
+  font-size: 0.88rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
 }
 
 .site-footer {
@@ -164,6 +217,6 @@ body {
 
 .vibecoded {
   margin: 0.4rem 0 0;
-  color: var(--accent);
+  color: #b6c1ff;
   font-size: 0.95rem;
 }
