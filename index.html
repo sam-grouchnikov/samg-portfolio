@@ -1,16 +1,109 @@
 <!doctype html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Developer Portfolio Skeleton</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<head>
-    <meta charset="utf-8">
-    <title>Hello World</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container">
+        <a class="logo" href="#">YourName.dev</a>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
 
-<body>
+      <section class="hero container">
+        <p class="eyebrow">Developer Portfolio</p>
+        <h1>Hi, I'm Your Name.</h1>
+        <p class="hero-copy">
+          I build accessible, high-performance web applications.
+        </p>
+        <div class="hero-actions">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn btn-ghost" href="#contact">Get in Touch</a>
+        </div>
+      </section>
+    </header>
 
-<p>Hello world! This is HTML5 Boilerplate.</p>
+    <main>
+      <section id="about" class="section container">
+        <h2>About</h2>
+        <div class="skeleton-card">
+          <p>Short bio, experience summary, and what you enjoy building.</p>
+        </div>
+      </section>
 
-</body>
+      <section id="projects" class="section container">
+        <h2>Featured Projects</h2>
+        <div class="grid">
+          <article class="skeleton-card">
+            <h3>Project One</h3>
+            <p>Brief description of the project, stack, and outcomes.</p>
+          </article>
+          <article class="skeleton-card">
+            <h3>Project Two</h3>
+            <p>Brief description of the project, stack, and outcomes.</p>
+          </article>
+          <article class="skeleton-card">
+            <h3>Project Three</h3>
+            <p>Brief description of the project, stack, and outcomes.</p>
+          </article>
+        </div>
+      </section>
 
+      <section id="skills" class="section container">
+        <h2>Skills</h2>
+        <ul class="pill-list">
+          <li>JavaScript</li>
+          <li>TypeScript</li>
+          <li>React</li>
+          <li>Node.js</li>
+          <li>CSS</li>
+          <li>Testing</li>
+        </ul>
+      </section>
+
+      <section id="education" class="section container">
+        <h2>Education</h2>
+        <div class="grid">
+          <article class="skeleton-card">
+            <h3>University Name</h3>
+            <p>B.S. in Computer Science, 2019 - 2023</p>
+            <p>Relevant coursework, achievements, or societies.</p>
+          </article>
+          <article class="skeleton-card">
+            <h3>High School Name</h3>
+            <p>STEM Track, 2015 - 2019</p>
+            <p>Notable activities, honors, or leadership roles.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="section container">
+        <h2>Contact</h2>
+        <div class="skeleton-card">
+          <p>Email, social links, and call-to-action go here.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <small>© <span id="year"></span> Your Name. All rights reserved.</small>
+        <p class="vibecoded">This page was vibecoded ✨</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>
