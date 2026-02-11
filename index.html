@@ -10,11 +10,13 @@
   <body>
     <header class="site-header">
       <nav class="nav container">
+        <a class="logo" href="#">SG</a>
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#education">Education</a></li>
+          <li><a href="#experience">Experience</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -23,7 +25,9 @@
         <p class="eyebrow">Developer Portfolio</p>
         <h1>Hi, I'm Sam Grouchnikov.</h1>
         <p class="hero-copy">
-          I build functional, high-performance web and desktop apps.
+          I build performant software products across web, desktop, and ML
+          workflows, with a focus on practical tools that solve real-world
+          problems.
         </p>
         <div class="hero-actions">
           <a class="btn" href="#projects">View Projects</a>
@@ -36,52 +40,126 @@
       <section id="about" class="section container">
         <h2>About</h2>
         <div class="skeleton-card">
-          <p>Hello, I am Sam Grouchnikov, a senior at Wheeler High School (Marietta, GA). My passions stems from identifying real-world problems I have encountered, and building functional software to solve these problems.</p>
+          <p>
+            Hello, I am Sam Grouchnikov, a senior at Wheeler High School
+            (Marietta, GA). My passion stems from identifying real-world
+            problems I have encountered and building functional software to
+            solve those problems.
+          </p>
         </div>
       </section>
 
       <section id="projects" class="section container">
         <h2>Featured Projects</h2>
         <div class="grid">
-          <article class="skeleton-card">
+          <article class="skeleton-card project-card">
             <h3>Easy-SSH</h3>
-            <p>Desktop-based integrated developer environment for AI model training (particularly in research settings). Built for seamless SSH connections, easy remote file editing, and one-click Weights&Biases log graph viewing.</p>
+            <p>
+              Desktop-based integrated developer environment for AI model
+              training in research settings, with seamless SSH connections,
+              remote file editing, and one-click Weights & Biases graph
+              viewing.
+            </p>
+            <div>
+              <h4>Stack</h4>
+              <ul class="stack-list">
+                <li>Electron</li>
+                <li>TypeScript</li>
+                <li>SSH</li>
+                <li>Weights & Biases API</li>
+              </ul>
+            </div>
           </article>
-          <article class="skeleton-card">
+          <article class="skeleton-card project-card">
             <h3>Schedwiz</h3>
-            <p>Web-based admin-catered app for quick school schedule creation. Breaks down a complex constraint satisfaction problem into smaller sub-problems, for efficient search space pruning.</p>
+            <p>
+              Web-based admin app for rapid school schedule creation that breaks
+              a complex constraint satisfaction problem into smaller subproblems
+              for efficient search space pruning.
+            </p>
+            <div>
+              <h4>Stack</h4>
+              <ul class="stack-list">
+                <li>React</li>
+                <li>Node.js</li>
+                <li>PostgreSQL</li>
+                <li>Constraint Solver</li>
+              </ul>
+            </div>
           </article>
-          <article class="skeleton-card">
+          <article class="skeleton-card project-card">
             <h3>Creativity Poly Encoder</h3>
-            <p>Fine-tuned, BERT-based NLP model for assessing creativity in educational settings. Complementary repository for academic research paper written on the subject.</p>
+            <p>
+              Fine-tuned BERT-based NLP model for assessing creativity in
+              educational settings, paired with a complementary academic
+              research repository.
+            </p>
+            <div>
+              <h4>Stack</h4>
+              <ul class="stack-list">
+                <li>Python</li>
+                <li>PyTorch</li>
+                <li>Transformers</li>
+                <li>BERT</li>
+              </ul>
+            </div>
           </article>
         </div>
       </section>
 
       <section id="skills" class="section container">
         <h2>Skills</h2>
-        <ul class="pill-list">
-          <li>JavaScript</li>
-          <li>TypeScript</li>
-          <li>React</li>
-          <li>Node.js</li>
-          <li>CSS</li>
-          <li>Testing</li>
-        </ul>
+        <div class="skills-grid">
+          <article class="skeleton-card">
+            <h3>Languages</h3>
+            <ul class="pill-list">
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>Python</li>
+              <li>SQL</li>
+            </ul>
+          </article>
+          <article class="skeleton-card">
+            <h3>Technologies</h3>
+            <ul class="pill-list">
+              <li>React</li>
+              <li>Node.js</li>
+              <li>Electron</li>
+              <li>PyTorch</li>
+              <li>PostgreSQL</li>
+              <li>GitHub Actions</li>
+            </ul>
+          </article>
+        </div>
       </section>
 
       <section id="education" class="section container">
         <h2>Education</h2>
         <div class="grid">
           <article class="skeleton-card">
-            <h3>University Name</h3>
-            <p>B.S. in Computer Science, 2019 - 2023</p>
-            <p>Relevant coursework, achievements, or societies.</p>
+            <h3>Wheeler High School</h3>
+            <p>Senior Year, 2022 - 2026</p>
+            <p>Computer science projects and research-driven development work.</p>
           </article>
           <article class="skeleton-card">
-            <h3>High School Name</h3>
-            <p>STEM Track, 2015 - 2019</p>
-            <p>Notable activities, honors, or leadership roles.</p>
+            <h3>Georgia Institute of Technology</h3>
+            <p>B.S. in Computer Science (Planned)</p>
+            <p>Coursework focus on software engineering, systems, and machine learning.</p>
+          </article>
+        </div>
+      </section>
+
+
+      <section id="experience" class="section container">
+        <h2>Experience</h2>
+        <div class="grid">
+          <article class="skeleton-card">
+            <h3>Position Title</h3>
+            <p>Date Range</p>
+            <p>
+              Placeholder description for responsibilities, impact, and technologies
+              used in this role.
+            </p>
           </article>
         </div>
       </section>
@@ -89,14 +167,14 @@
       <section id="contact" class="section container">
         <h2>Contact</h2>
         <div class="skeleton-card">
-          <p>Email, social links, and call-to-action go here.</p>
+          <p>Open to internships, collaborations, and research opportunities.</p>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="container">
-        <small>© <span id="year"></span> Your Name. All rights reserved.</small>
+        <small>© <span id="year"></span> Sam Grouchnikov. All rights reserved.</small>
         <p class="vibecoded">This page was vibecoded ✨</p>
       </div>
     </footer>
