@@ -1,0 +1,1 @@
+Trying out vibecoding, all of the code is generated with ChatGPT codex.
