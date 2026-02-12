@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Sam Grouchnikov Portfolio</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script>
+      (() => {
+        const storedTheme = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const theme = storedTheme || (prefersDark ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
   </head>
 
   <body>
@@ -16,9 +24,11 @@
           <li><a href="#projects">Projects</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#education">Education</a></li>
+          <li><a href="#certifications">Certifications</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light and dark mode">🌙 Dark</button>
       </nav>
 
       <section class="hero container">
@@ -156,6 +166,28 @@
         </div>
       </section>
 
+      <section id="certifications" class="section container">
+        <h2>Course Certifications</h2>
+        <div class="grid">
+          <article class="skeleton-card">
+            <h3>Data Structures and Algorithms</h3>
+            <p>UC San Diego</p>
+          </article>
+          <article class="skeleton-card">
+            <h3>Natural Language Processing</h3>
+            <p>Stanford</p>
+          </article>
+          <article class="skeleton-card">
+            <h3>Discrete Optimization</h3>
+            <p>Georgia Tech</p>
+          </article>
+          <article class="skeleton-card">
+            <h3>Computational Neuroscience</h3>
+            <p>University of Washington</p>
+          </article>
+        </div>
+      </section>
+
 
       <section id="experience" class="section container">
         <h2>Experience</h2>
@@ -199,6 +231,22 @@
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
+
+      const themeToggle = document.getElementById("theme-toggle");
+      const root = document.documentElement;
+
+      const setTheme = (theme) => {
+        root.setAttribute("data-theme", theme);
+        themeToggle.textContent = theme === "dark" ? "🌙 Dark" : "☀️ Light";
+      };
+
+      setTheme(root.getAttribute("data-theme") || "dark");
+
+      themeToggle.addEventListener("click", () => {
+        const nextTheme = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        setTheme(nextTheme);
+        localStorage.setItem("theme", nextTheme);
+      });
     </script>
   </body>
 </html>
